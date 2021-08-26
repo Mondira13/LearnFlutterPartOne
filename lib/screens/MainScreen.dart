@@ -9,6 +9,12 @@ import 'GridViewScreen.dart';
 import 'OpenCameraScreen.dart';
 import 'OpenGalleryScreen.dart';
 import 'DocumentPickerScreen.dart';
+import 'LocalStorageScreen.dart';
+import 'SplashScreen.dart';
+import 'MultiLanguageSupportScreen.dart';
+import 'FontSetUpScreen.dart';
+import 'WebServiceCallUsingDioScreen.dart';
+// import 'WebServiceCallScreen.dart';
 
 
 class MainScreen extends StatelessWidget {
@@ -219,6 +225,107 @@ class MainScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => DocumentPickerScreen()),
+                  );
+                },
+                color: Colors.red,
+                textColor: Colors.yellow,
+                splashColor: Colors.grey,
+              ),
+            ),
+            Container(
+              width: 300,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
+              child: RaisedButton(
+
+                child: Text(
+                  "Local Storage",
+                  style: TextStyle(fontSize: 20),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LocalStorageScreen()),
+                  );
+                },
+                color: Colors.red,
+                textColor: Colors.yellow,
+                splashColor: Colors.grey,
+              ),
+            ),
+            Container(
+              width: 300,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
+              child: RaisedButton(
+
+                child: Text(
+                  "Splash Screen",
+                  style: TextStyle(fontSize: 20),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SplashScreen()),
+                  );
+                },
+                color: Colors.red,
+                textColor: Colors.yellow,
+                splashColor: Colors.grey,
+              ),
+            ),
+            Container(
+              width: 300,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
+              child: RaisedButton(
+
+                child: Text(
+                  "Multi Language Support",
+                  style: TextStyle(fontSize: 20),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MultiLanguageSupportScreen()),
+                  );
+                },
+                color: Colors.red,
+                textColor: Colors.yellow,
+                splashColor: Colors.grey,
+              ),
+            ),
+            Container(
+              width: 300,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
+              child: RaisedButton(
+
+                child: Text(
+                  "Font Setup",
+                  style: TextStyle(fontSize: 20),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => FontSetUpScreen()),
+                  );
+                },
+                color: Colors.red,
+                textColor: Colors.yellow,
+                splashColor: Colors.grey,
+              ),
+            ),
+            Container(
+              width: 300,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
+              child: RaisedButton(
+
+                child: Text(
+                  "Web Service Call",
+                  style: TextStyle(fontSize: 20),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    // MaterialPageRoute(builder: (context) => WebServiceCallScreen()),
+                    MaterialPageRoute(builder: (context) => WebServiceCallUsingDioScreen()),
                   );
                 },
                 color: Colors.red,
