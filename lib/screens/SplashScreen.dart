@@ -11,6 +11,8 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen>{
+  String textValue = "Welcome to Main Page!!!!";
+
     @override
     void initState() {
       super.initState();
@@ -18,25 +20,27 @@ class _SplashScreenState extends State<SplashScreen>{
               ()=>Navigator.pushReplacement(context,
               MaterialPageRoute(builder:
                   (context) =>
-                  SecondScreen()
+                  SecondScreen(title : textValue)
               )
           )
       );
     }
     @override
     Widget build(BuildContext context) {
+       AssetImage assetImage = AssetImage('images/rose.jpeg');
+       Image image = Image(image: assetImage);
       return Container(
           color: Colors.brown,
           // child:FlutterLogo(size:MediaQuery.of(context).size.height)
         child: Center(
           // child: Text("Flutter App!!!!",style: TextStyle(fontSize: 25, color: Colors.white)),
 
-        child: Lottie.network(
-            'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json'),
+        // child: Lottie.network˳(
+        //     'https://raw.githubusercontent.com/xvrh/lottie-flutter/master/example/assets/Mobilo/A.json'),
 
-          // child: Lottie.asset('lib/animations/newanimation.json'),
+          child: Lottie.asset('lib/animations/newanimation.json'),
 
-          // child: AssetImage('lib/animations/rose.jpeg')
+          // child: image
       
         ),
       );

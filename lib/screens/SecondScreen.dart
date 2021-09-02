@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
+
 class SecondScreen extends StatelessWidget {
+   String title;
+
+   SecondScreen({required this.title});
+
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -12,7 +18,7 @@ class SecondScreen extends StatelessWidget {
           ),
 
           body: Center(
-            child: Text("Welcome to Flutter!!!!",style: TextStyle(fontSize: 25, color: Colors.blue)),
+            child: Text('${title}',style: TextStyle(fontSize: 25, color: Colors.blue)),
           ),
 
         )

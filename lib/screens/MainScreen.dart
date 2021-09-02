@@ -14,11 +14,12 @@ import 'SplashScreen.dart';
 import 'MultiLanguageSupportScreen.dart';
 import 'FontSetUpScreen.dart';
 import 'WebServiceCallUsingDioScreen.dart';
-// import 'WebServiceCallScreen.dart';
+import 'UiDesignSampleScreen.dart';
+import 'VideoPlayerSampleScreen.dart';
 
 
 class MainScreen extends StatelessWidget {
-
+  String textValue = "Welcome to Flutter!!!!";
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class MainScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SecondScreen()),
+                    MaterialPageRoute(builder: (context) =>  SecondScreen(title : textValue)),
                   );
                 },
                 color: Colors.red,
@@ -324,7 +325,6 @@ class MainScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    // MaterialPageRoute(builder: (context) => WebServiceCallScreen()),
                     MaterialPageRoute(builder: (context) => WebServiceCallUsingDioScreen()),
                   );
                 },
@@ -333,8 +333,47 @@ class MainScreen extends StatelessWidget {
                 splashColor: Colors.grey,
               ),
             ),
+            Container(
+              width: 300,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
+              child: RaisedButton(
 
+                child: Text(
+                  "UI Practice",
+                  style: TextStyle(fontSize: 20),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UiDesignSampleScreen()),
+                  );
+                },
+                color: Colors.red,
+                textColor: Colors.yellow,
+                splashColor: Colors.grey,
+              ),
+            ),
 
+            Container(
+              width: 300,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
+              child: RaisedButton(
+
+                child: Text(
+                  "Video Player Sample",
+                  style: TextStyle(fontSize: 20),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => VideoPlayerSampleScreen()),
+                  );
+                },
+                color: Colors.red,
+                textColor: Colors.yellow,
+                splashColor: Colors.grey,
+              ),
+            ),
 
 
 

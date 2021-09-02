@@ -28,9 +28,7 @@ class _DataFromAPIState extends State<DataFromAPI> {
     Dio dio = Dio();
     try {
       final response = await dio.get(ApiService.url);
-      PostResponse postResponse =
-          PostResponse.fromJSON(jsonDecode(response.data));
-      print(postResponse.beautyAndSpa.length);
+      PostResponse postResponse = PostResponse.fromJSON(jsonDecode(response.data));
       listOfData = postResponse.beautyAndSpa;
       return listOfData;
     } on DioError catch (e) {

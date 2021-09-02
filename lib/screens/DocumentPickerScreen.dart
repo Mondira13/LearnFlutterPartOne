@@ -34,7 +34,7 @@ class _DocumentPickerScreenState extends State<DocumentPickerScreen>{
         // fileBytes = file.bytes as String;
         // fileSize = file.size as String;
         fileExtension = file.extension!;
-        filePath = file.path!;
+        filePath = file.path;
       });
     } else {
       showToast("User canceled the picker");
