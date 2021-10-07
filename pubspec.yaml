@@ -45,6 +45,8 @@ dependencies:
   webview_flutter: ^2.0.12
   timeline_tile: ^2.0.0
   circular_countdown_timer: ^0.2.0
+  geolocator: ^7.7.0
+  geocoding: ^2.0.1
 
 
 

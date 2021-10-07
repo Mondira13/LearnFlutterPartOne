@@ -19,6 +19,7 @@ import 'VideoPlayerSampleScreen.dart';
 import 'WebviewScreen.dart';
 import 'TimelineViewScreen.dart';
 import 'CountDownTimerScreen.dart';
+import 'GoogleMapScreen.dart';
 
 
 class MainScreen extends StatelessWidget {
@@ -367,7 +368,7 @@ class MainScreen extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 50,
-              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0,bottom: 15.0),
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
               child: ElevatedButton(
                 style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
@@ -386,7 +387,7 @@ class MainScreen extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 50,
-              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0,bottom: 15.0),
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
               child: ElevatedButton(
                 style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
@@ -397,6 +398,25 @@ class MainScreen extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => CountDownTimerScreen()),
+                  );
+                },
+              ),
+            ),
+
+            Container(
+              width: double.infinity,
+              height: 50,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0,bottom: 15.0),
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
+                child: Text(
+                  "Google Map",
+                  style: TextStyle(fontSize: 20,color: Colors.white),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => GoogleMapScreen()),
                   );
                 },
               ),
