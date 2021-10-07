@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'UiSampleOne.dart';
 import 'UiSampleTwo.dart';
+import 'UiSampleThree.dart';
 import '../components_screen/SimpleCustomAlert.dart';
 import '../components_screen/CustomAlertSample.dart';
 
@@ -13,11 +14,13 @@ class UiDesignSampleScreen extends StatelessWidget {
             appBar: AppBar(
                 title: Text("UI Design Sample Screen"),
                 backgroundColor: Colors.purple),
+
+
             body: ListView(children: <Widget>[
               Container(
                 width: 300,
                 margin: EdgeInsets.only(top: 20.0, left: 15.0, right: 15.0),
-                child: RaisedButton(
+                child: ElevatedButton(
                   child: Text(
                     "UI Sample - 1",
                     style: TextStyle(fontSize: 20),
@@ -28,10 +31,6 @@ class UiDesignSampleScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => UiSampleOne()),
                     );
                   },
-                  color: Colors.lightGreen,
-                  textColor: Colors.white,
-                  // padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0, bottom: 5.0),
-                  splashColor: Colors.grey,
                 ),
               ),
 
@@ -39,7 +38,7 @@ class UiDesignSampleScreen extends StatelessWidget {
               Container(
                 width: 300,
                 margin: EdgeInsets.only(top: 20.0, left: 15.0, right: 15.0),
-                child: RaisedButton(
+                child: ElevatedButton(
                   child: Text(
                     "UI Sample - 2",
                     style: TextStyle(fontSize: 20),
@@ -50,17 +49,31 @@ class UiDesignSampleScreen extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => UiSampleTwo()),
                     );
                   },
-                  color: Colors.lightGreen,
-                  textColor: Colors.white,
-                  // padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0, bottom: 5.0),
-                  splashColor: Colors.grey,
                 ),
               ),
 
               Container(
                 width: 300,
                 margin: EdgeInsets.only(top: 20.0, left: 15.0, right: 15.0),
-                child: RaisedButton(
+                child: ElevatedButton(
+                  child: Text(
+                    "UI Sample - 3",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => UiSampleThree()),
+                    );
+                  },
+                ),
+              ),
+
+
+              Container(
+                width: 300,
+                margin: EdgeInsets.only(top: 20.0, left: 15.0, right: 15.0),
+                child: ElevatedButton(
                   child: Text(
                     "Custom Alert Dialog - 1",
                     style: TextStyle(fontSize: 20),
@@ -70,16 +83,13 @@ class UiDesignSampleScreen extends StatelessWidget {
                       return SimpleCustomAlert("My Demo title");
                     });
                   },
-                  color: Colors.lightGreen,
-                  textColor: Colors.white,
-                  splashColor: Colors.grey,
                 ),
               ),
 
               Container(
                 width: 300,
                 margin: EdgeInsets.only(top: 20.0, left: 15.0, right: 15.0),
-                child: RaisedButton(
+                child: ElevatedButton(
                   child: Text(
                     "Custom Alert Dialog - 2",
                     style: TextStyle(fontSize: 20),
@@ -89,11 +99,12 @@ class UiDesignSampleScreen extends StatelessWidget {
                       return CustomAlertSample("Process Complete ");
                     });
                   },
-                  color: Colors.lightGreen,
-                  textColor: Colors.white,
-                  splashColor: Colors.grey,
                 ),
               ),
+
+
+
+
 
 
 

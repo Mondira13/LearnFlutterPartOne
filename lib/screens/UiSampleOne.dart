@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../components_screen/CustomAppBar.dart';
 
 class UiSampleOne extends StatelessWidget {
-  List<String> mainList = ["All Categories", "Members Deals", "Special Offer"];
+  List<String> mainList = ["All Categories", "Members Deals", "Special Offer","Recent View","Monthly Offer"];
   List<String> myList = [
     "Amaryllis.",
     "African Daisy",
@@ -35,14 +35,14 @@ class UiSampleOne extends StatelessWidget {
                 children: <Widget>[
                   Expanded(
                     child: ListView.builder(
-                        // scrollDirection: Axis.vertical,
+                        scrollDirection: Axis.vertical,
                         shrinkWrap: true,
                         itemCount: mainList.length,
                         itemBuilder: (BuildContext context, int index) {
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              // Text(mainList[index]),
+
                               Container(
                                 margin: EdgeInsets.only(left:15.0,right: 15.0),
                                   child: Row(children: <Widget>[
@@ -51,7 +51,7 @@ class UiSampleOne extends StatelessWidget {
                                         color: Colors.black,
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold)),
-                                FlatButton(
+                                TextButton(
                                   onPressed: () {},
                                   // color: Colors.blue,
                                   child: new Row(
@@ -71,41 +71,90 @@ class UiSampleOne extends StatelessWidget {
                                 )
                               ])),
 
-                              ListView.builder(
-                                  itemCount: myList.length,
-                                  physics: ClampingScrollPhysics(),
-                                  shrinkWrap: true,
-                                  // scrollDirection: Axis.horizontal,
-                                  itemBuilder: (BuildContext context, int index) {
-                                    return Container(
-                                        child: Column(children: <Widget>[
-                                          Card(
-                                            elevation: 2.0,
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.circular(80),
-                                            ),
-                                            child: Container(
-                                              height: 85,
-                                              width: 100,
-                                              margin: EdgeInsets.only(
-                                                  top: 15.0, bottom: 15.0, left: 10.0, right: 10.0),
-                                              child: Center(
-                                                child: Image(
-                                                    image: NetworkImage(myLinkList[index]),
-                                                    width: 75.0,
-                                                    height: 75.0),
+                              SizedBox(
+                                width: double.infinity,
+                                height: 170,
+                                child: ListView.builder(
+                                    itemCount: myList.length,
+                                    physics: ClampingScrollPhysics(),
+                                    shrinkWrap: true,
+                                    scrollDirection: Axis.horizontal,
+                                    itemBuilder: (BuildContext context, int index) {
+                                      return Container(
+                                          child: Column(children: <Widget>[
+                                            Card(
+                                              elevation: 2.0,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(80),
+                                              ),
+                                              child: Container(
+                                                height: 85,
+                                                width: 100,
+                                                margin: EdgeInsets.only(
+                                                    top: 15.0, bottom: 15.0, left: 10.0, right: 10.0),
+                                                child: Center(
+                                                  child: Image(
+                                                      image: NetworkImage(myLinkList[index]),
+                                                      width: 75.0,
+                                                      height: 75.0),
+                                                ),
                                               ),
                                             ),
-                                          ),
 
-                                          Center(
-                                            child: Text(myList[index],style: TextStyle(fontSize: 17, color: Colors.brown)),
-                                          )
+                                            Center(
+                                              child: Text(myList[index],style: TextStyle(fontSize: 17, color: Colors.brown)),
+                                            )
 
-                                        ]));
+                                          ]));
 
 
-                                  }),
+                                    }),
+                              )
+
+
+
+                              // ListView.builder(
+                              //     itemCount: myList.length,
+                              //     physics: ClampingScrollPhysics(),
+                              //     shrinkWrap: true,
+                              //     // scrollDirection: Axis.horizontal,
+                              //     itemBuilder: (BuildContext context, int index) {
+                              //       return Container(
+                              //           child: Column(children: <Widget>[
+                              //             Card(
+                              //               elevation: 2.0,
+                              //               shape: RoundedRectangleBorder(
+                              //                 borderRadius: BorderRadius.circular(80),
+                              //               ),
+                              //               child: Container(
+                              //                 height: 85,
+                              //                 width: 100,
+                              //                 margin: EdgeInsets.only(
+                              //                     top: 15.0, bottom: 15.0, left: 10.0, right: 10.0),
+                              //                 child: Center(
+                              //                   child: Image(
+                              //                       image: NetworkImage(myLinkList[index]),
+                              //                       width: 75.0,
+                              //                       height: 75.0),
+                              //                 ),
+                              //               ),
+                              //             ),
+                              //
+                              //             Center(
+                              //               child: Text(myList[index],style: TextStyle(fontSize: 17, color: Colors.brown)),
+                              //             )
+                              //
+                              //           ]));
+                              //
+                              //
+                              //     }),
+
+
+
+
+
+
+
                             ],
                           );
                         }),

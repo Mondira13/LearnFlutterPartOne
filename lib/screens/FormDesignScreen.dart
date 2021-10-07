@@ -20,7 +20,7 @@ class FormDesignScreen extends StatefulWidget {
       return Material(
           child : Scaffold(
               backgroundColor: Colors.white,
-              body: Column(children: <Widget>[
+              body: ListView(children: <Widget>[
                 Container(
                     margin: EdgeInsets.only(left: 15,right: 15,top: 30),
                     child:  TextFormField(
@@ -101,8 +101,204 @@ class FormDesignScreen extends StatefulWidget {
                 ),
 
                 Container(
-                  width: 300,height: 40,
-                  margin: EdgeInsets.only(top: 30.0),
+                    margin: EdgeInsets.only(left: 15,right: 15,top: 10),
+                    child:  TextFormField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.blueAccent, width: 5.0),
+                          borderRadius: BorderRadius.circular(35.0),
+                        ),
+                        // labelText: 'Enter your username',
+                        hintText: 'Enter your username - 2',
+                      ),
+                      autofocus: true,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter username';
+                        }
+                        return null;
+                      },
+                      onChanged: (text) => {
+                        setState(() {
+                          name = text;
+                        }),
+                      },
+                      textInputAction: TextInputAction.next,
+                    )
+                ),
+
+                Container(
+                    margin: EdgeInsets.only(left: 15,right: 15,top: 15),
+                    child:  TextFormField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.blueAccent, width: 5.0),
+                          borderRadius: BorderRadius.circular(35.0),
+                        ),
+                        // labelText: 'Enter your username',
+                        hintText: 'Enter your username - 3',
+                      ),
+                      autofocus: true,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter username';
+                        }
+                        return null;
+                      },
+                      onChanged: (text) => {
+                        setState(() {
+                          name = text;
+                        }),
+                      },
+                      textInputAction: TextInputAction.next,
+                    )
+                ),
+
+                Container(
+                    margin: EdgeInsets.only(left: 15,right: 15,top: 15),
+                    child:  TextFormField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.blueAccent, width: 5.0),
+                          borderRadius: BorderRadius.circular(35.0),
+                        ),
+                        // labelText: 'Enter your username',
+                        hintText: 'Enter your username - 4',
+                      ),
+                      autofocus: true,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter username';
+                        }
+                        return null;
+                      },
+                      onChanged: (text) => {
+                        setState(() {
+                          name = text;
+                        }),
+                      },
+                      textInputAction: TextInputAction.next,
+                    )
+                ),
+                Container(
+                    margin: EdgeInsets.only(left: 15,right: 15,top: 15),
+                    child:  TextFormField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.blueAccent, width: 5.0),
+                          borderRadius: BorderRadius.circular(35.0),
+                        ),
+                        // labelText: 'Enter your username',
+                        hintText: 'Enter your username - 5',
+                      ),
+                      autofocus: true,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter username';
+                        }
+                        return null;
+                      },
+                      onChanged: (text) => {
+                        setState(() {
+                          name = text;
+                        }),
+                      },
+                      textInputAction: TextInputAction.next,
+                    )
+                ),
+                Container(
+                    margin: EdgeInsets.only(left: 15,right: 15,top: 15),
+                    child:  TextFormField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.blueAccent, width: 5.0),
+                          borderRadius: BorderRadius.circular(35.0),
+                        ),
+                        // labelText: 'Enter your username',
+                        hintText: 'Enter your username - 6',
+                      ),
+                      autofocus: true,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter username';
+                        }
+                        return null;
+                      },
+                      onChanged: (text) => {
+                        setState(() {
+                          name = text;
+                        }),
+                      },
+                      textInputAction: TextInputAction.next,
+                    )
+                ),
+                Container(
+                    margin: EdgeInsets.only(left: 15,right: 15,top: 15),
+                    child:  TextFormField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.blueAccent, width: 5.0),
+                          borderRadius: BorderRadius.circular(35.0),
+                        ),
+                        // labelText: 'Enter your username',
+                        hintText: 'Enter your username - 7',
+                      ),
+                      autofocus: true,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter username';
+                        }
+                        return null;
+                      },
+                      onChanged: (text) => {
+                        setState(() {
+                          name = text;
+                        }),
+                      },
+                      textInputAction: TextInputAction.next,
+                    )
+                ),Container(
+                    margin: EdgeInsets.only(left: 15,right: 15,top: 15),
+                    child:  TextFormField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.blueAccent, width: 5.0),
+                          borderRadius: BorderRadius.circular(35.0),
+                        ),
+                        // labelText: 'Enter your username',
+                        hintText: 'Enter your username - 8',
+                      ),
+                      autofocus: true,
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Please enter username';
+                        }
+                        return null;
+                      },
+                      onChanged: (text) => {
+                        setState(() {
+                          name = text;
+                        }),
+                      },
+                      textInputAction: TextInputAction.next,
+                    )
+                ),
+
+
+
+
+
+
+
+
+
+
+
+
+
+                Container(
+                  height: 50,
+                  margin: EdgeInsets.only(left: 15,right: 15,top: 35.0),
                   child: RaisedButton(
 
                     child: Text(
@@ -117,8 +313,6 @@ class FormDesignScreen extends StatefulWidget {
                     splashColor: Colors.grey,
                   ),
                 ),
-
-
 
 
               ]

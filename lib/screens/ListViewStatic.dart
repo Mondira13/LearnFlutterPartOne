@@ -31,14 +31,26 @@ class ListViewStatic extends StatelessWidget {
               margin: EdgeInsets.only(left: 15.0,right: 15.0,top: 5.0),
               child: Row(children: <Widget>[
                 Image(image: NetworkImage(myLinkList[index]),width: 100.0,height: 100.0),
-                Container(
-                    margin: EdgeInsets.only(left: 10.0),
+                Flexible(child: Container(
+                  margin: EdgeInsets.only(left: 10.0),
                   child: Column(children: <Widget>[
-                    Text(myList[index],style: TextStyle(fontSize: 20, color: Colors.purple)),
-                    Text("Lorem Ipsum is simply dummy text",style: TextStyle(fontSize: 15, color: Colors.lightGreen)),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(myList[index],style: TextStyle(fontSize: 17, color: Colors.purple),textAlign: TextAlign.left,),
+                    ),
+
+
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text('Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text Lorem Ipsum is simply dummy text',
+                            style: TextStyle(fontSize: 13, color: Colors.lightGreen)
+                        ),
+                    ),
 
                   ]),
-                )
+                ))
+
+
               ]),
             );
           },

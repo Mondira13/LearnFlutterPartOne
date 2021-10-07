@@ -56,8 +56,9 @@ class UiSampleTwo extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        margin: EdgeInsets.only(left: 5.0),
+
+                      Flexible(child: Container(
+                        margin: EdgeInsets.only(left: 10.0),
                         child: Column(children: <Widget>[
                           Align(
                             alignment: Alignment.centerLeft,
@@ -121,7 +122,7 @@ class UiSampleTwo extends StatelessWidget {
                                 ),
                                 Container(
                                   margin:
-                                      EdgeInsets.only(top: 15.0, left: 25.0),
+                                  EdgeInsets.only(top: 15.0, left: 25.0),
                                   child: OutlineButton(
                                     child: Center(
                                         child: Text("Disc: Rs.50",
@@ -139,6 +140,13 @@ class UiSampleTwo extends StatelessWidget {
                               ]))
                         ]),
                       )
+                      )
+
+
+
+
+
+
                     ]));
               }),
         ));

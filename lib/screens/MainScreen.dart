@@ -16,6 +16,9 @@ import 'FontSetUpScreen.dart';
 import 'WebServiceCallUsingDioScreen.dart';
 import 'UiDesignSampleScreen.dart';
 import 'VideoPlayerSampleScreen.dart';
+import 'WebviewScreen.dart';
+import 'TimelineViewScreen.dart';
+import 'CountDownTimerScreen.dart';
 
 
 class MainScreen extends StatelessWidget {
@@ -28,12 +31,14 @@ class MainScreen extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 20.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Go to next screen",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -41,21 +46,18 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) =>  SecondScreen(title : textValue)),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                // padding: EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0, bottom: 5.0),
-                splashColor: Colors.grey,
               ),
             ),
 
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Button list",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -64,20 +66,18 @@ class MainScreen extends StatelessWidget {
                         builder: (context) => ButtonsListScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
 
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "ListView With Static Data",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -85,19 +85,17 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => ListViewStatic()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Navigation Drawer",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -106,19 +104,17 @@ class MainScreen extends StatelessWidget {
                         builder: (context) => NavigationDrawerScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Bottom Tab Navigation",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -127,19 +123,17 @@ class MainScreen extends StatelessWidget {
                         builder: (context) => BottomTabNavigationScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Tab Bar",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -147,19 +141,17 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => TabBarScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Grid View With Static Data",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -167,20 +159,18 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => GridViewScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
 
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Open Camera",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -188,19 +178,17 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => OpenCameraScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Access Gallery",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -208,19 +196,17 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => OpenGalleryScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Document Picker",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -228,19 +214,17 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => DocumentPickerScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Local Storage",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -248,19 +232,17 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => LocalStorageScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Splash Screen",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -268,39 +250,36 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => SplashScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
-            Container(
-              width: 300,
-              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
 
-                child: Text(
-                  "Multi Language Support",
-                  style: TextStyle(fontSize: 20),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => MultiLanguageSupportScreen()),
-                  );
-                },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
-              ),
-            ),
-            Container(
-              width: 300,
-              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
+            // Container(
+            //   width: 300,
+            //   margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
+            //   child: ElevatedButton(
+            //
+            //     child: Text(
+            //       "Multi Language Support",
+            //       style: TextStyle(fontSize: 20),
+            //     ),
+            //     onPressed: () {
+            //       Navigator.push(
+            //         context,
+            //         MaterialPageRoute(builder: (context) => MultiLanguageSupportScreen()),
+            //       );
+            //     },
+            //   ),
+            // ),
 
+            Container(
+              width: double.infinity,
+              height: 50,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Font Setup",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -308,19 +287,17 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => FontSetUpScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Web Service Call",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -328,19 +305,17 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => WebServiceCallUsingDioScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "UI Practice",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -348,20 +323,18 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => UiDesignSampleScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
 
             Container(
-              width: 300,
+              width: double.infinity,
+              height: 50,
               margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
-              child: RaisedButton(
-
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
                 child: Text(
                   "Video Player Sample",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20,color: Colors.white),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -369,11 +342,66 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => VideoPlayerSampleScreen()),
                   );
                 },
-                color: Colors.red,
-                textColor: Colors.yellow,
-                splashColor: Colors.grey,
               ),
             ),
+
+            Container(
+              width: double.infinity,
+              height: 50,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0),
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
+                child: Text(
+                  "Webview Sample",
+                  style: TextStyle(fontSize: 20,color: Colors.white),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => WebviewScreen()),
+                  );
+                },
+              ),
+            ),
+
+            Container(
+              width: double.infinity,
+              height: 50,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0,bottom: 15.0),
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
+                child: Text(
+                  "Timeline View Sample",
+                  style: TextStyle(fontSize: 20,color: Colors.white),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TimelineViewScreen()),
+                  );
+                },
+              ),
+            ),
+
+            Container(
+              width: double.infinity,
+              height: 50,
+              margin: EdgeInsets.only(top: 10.0,left: 15.0,right: 15.0,bottom: 15.0),
+              child: ElevatedButton(
+                style: ButtonStyle(backgroundColor: MaterialStateProperty.all(Colors.lightGreen),),
+                child: Text(
+                  "Countdown Timer",
+                  style: TextStyle(fontSize: 20,color: Colors.white),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CountDownTimerScreen()),
+                  );
+                },
+              ),
+            ),
+
 
 
 
